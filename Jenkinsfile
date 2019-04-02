@@ -8,9 +8,10 @@ pipeline {
       }
     }
 
-  stage('Deploy to QA') {
-    steps {
-      sh "ecs-deploy --help"
+    stage('Deploy to QA') {
+      steps {
+        sh "ecs-deploy --help"
+      }
     }
   }
 }
