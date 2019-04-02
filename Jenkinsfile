@@ -7,7 +7,6 @@ pipeline {
         echo "Prepare environment"
       }
     }
-  }
 
   stage('Deploy to QA') {
     steps {
