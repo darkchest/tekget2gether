@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - eval `aws ecr get-login --region us-east-1 --no-include-email`
+      - ECR_REPO=277359228885.dkr.ecr.us-east-1.amazonaws.com/tekget2gether
+
+  build:
+    commands:
+      - docker build -t $ECR_REPO:demo .
+
+  post_build:
+    commands:
+      - docker push $ECR_REPO:demo
