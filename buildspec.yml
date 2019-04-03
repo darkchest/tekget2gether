@@ -8,8 +8,8 @@ phases:
 
   build:
     commands:
-      - docker build -t $ECR_REPO:demo .
+      - docker build -t $ECR_REPO:v1 .
 
   post_build:
     commands:
-      - docker push $ECR_REPO:demo
+      - docker push $ECR_REPO:v1
