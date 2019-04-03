@@ -25,7 +25,7 @@ pipeline {
 
     stage('Deploy to QA') {
       steps {
-        sh "Deploy to QA"
+        echo "Deploy to QA"
       }
     }
   }
